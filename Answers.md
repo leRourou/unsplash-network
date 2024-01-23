@@ -14,3 +14,10 @@ Les différents types de `column` sont :
 - `Adaptive` qui ne respectent pas les instructions et vont d'adapter à place disponible pour placer les colonnes.
 
 Les images prennent toute la place de l'écran, car on ne leur a renseigné aucune largeur. Par défaut, le ratio de l'image n'est pas respecté et donc la largeur de l'image reste la même dans la vue.
+
+### Exercice 2
+
+- `.resizable()` permet à l'image d'être redimensionnée.
+- `.scaledToFill()` indique que l'image doit être mise à l'échelle pour remplir entièrement le cadre tout en conservant son ratio.
+- `.frame(width: geo.size.width, height: geo.size.height)` définit la taille du cadre de l'image en fonction de la largeur et de la hauteur de l'espace disponible fourni par le GeometryReader
+- `.clipped()` cela indique que l'image doit être rognée pour s'adapter au cadre défini précédemment.

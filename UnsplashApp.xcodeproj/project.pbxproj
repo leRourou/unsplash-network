@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05F719212B5FECC9004180CD /* unsplash_networkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F719202B5FECC9004180CD /* unsplash_networkApp.swift */; };
+		055F27842B600D44008CE163 /* UnsplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F27832B600D44008CE163 /* UnsplashModel.swift */; };
+		055F27882B600F6E008CE163 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F27872B600F6E008CE163 /* PListManager.swift */; };
+		055F278E2B60109D008CE163 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 055F278D2B60109D008CE163 /* environment.plist */; };
+		055F27902B601DAD008CE163 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F278F2B601DAD008CE163 /* FeedState.swift */; };
+		05F719212B5FECC9004180CD /* UnsplashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F719202B5FECC9004180CD /* UnsplashApp.swift */; };
 		05F719232B5FECC9004180CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F719222B5FECC9004180CD /* ContentView.swift */; };
-		05F719252B5FECC9004180CD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F719242B5FECC9004180CD /* Item.swift */; };
 		05F719272B5FECCB004180CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F719262B5FECCB004180CD /* Assets.xcassets */; };
 		05F7192B2B5FECCB004180CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F7192A2B5FECCB004180CD /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055F27832B600D44008CE163 /* UnsplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashModel.swift; sourceTree = "<group>"; };
+		055F27872B600F6E008CE163 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
+		055F278D2B60109D008CE163 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
+		055F278F2B601DAD008CE163 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
 		05F7191D2B5FECC9004180CD /* UnsplashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		05F719202B5FECC9004180CD /* unsplash_networkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unsplash_networkApp.swift; sourceTree = "<group>"; };
+		05F719202B5FECC9004180CD /* UnsplashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApp.swift; sourceTree = "<group>"; };
 		05F719222B5FECC9004180CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		05F719242B5FECC9004180CD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		05F719262B5FECCB004180CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05F719282B5FECCB004180CD /* unsplash_network.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = unsplash_network.entitlements; sourceTree = "<group>"; };
 		05F7192A2B5FECCB004180CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,12 +60,15 @@
 		05F7191F2B5FECC9004180CD /* unsplash-network */ = {
 			isa = PBXGroup;
 			children = (
-				05F719202B5FECC9004180CD /* unsplash_networkApp.swift */,
+				055F27872B600F6E008CE163 /* PListManager.swift */,
+				05F719202B5FECC9004180CD /* UnsplashApp.swift */,
 				05F719222B5FECC9004180CD /* ContentView.swift */,
-				05F719242B5FECC9004180CD /* Item.swift */,
 				05F719262B5FECCB004180CD /* Assets.xcassets */,
 				05F719282B5FECCB004180CD /* unsplash_network.entitlements */,
 				05F719292B5FECCB004180CD /* Preview Content */,
+				055F27832B600D44008CE163 /* UnsplashModel.swift */,
+				055F278D2B60109D008CE163 /* environment.plist */,
+				055F278F2B601DAD008CE163 /* FeedState.swift */,
 			);
 			path = "unsplash-network";
 			sourceTree = "<group>";
@@ -132,6 +141,7 @@
 			files = (
 				05F7192B2B5FECCB004180CD /* Preview Assets.xcassets in Resources */,
 				05F719272B5FECCB004180CD /* Assets.xcassets in Resources */,
+				055F278E2B60109D008CE163 /* environment.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055F27902B601DAD008CE163 /* FeedState.swift in Sources */,
+				055F27882B600F6E008CE163 /* PListManager.swift in Sources */,
+				055F27842B600D44008CE163 /* UnsplashModel.swift in Sources */,
 				05F719232B5FECC9004180CD /* ContentView.swift in Sources */,
-				05F719252B5FECC9004180CD /* Item.swift in Sources */,
-				05F719212B5FECC9004180CD /* unsplash_networkApp.swift in Sources */,
+				05F719212B5FECC9004180CD /* UnsplashApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +306,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "laraclette.unsplash-network";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,7 +343,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "laraclette.unsplash-network";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

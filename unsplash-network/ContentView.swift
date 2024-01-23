@@ -6,61 +6,57 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @StateObject var feedState = FeedState()
+    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+
+    func loadData() async {
+        await feedState.fetchHomeFeed()
+    }
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        NavigationStack() {
+            Text("Feed")
+        }
+        .frame(height: 30)
+        .font(.largeTitle)
+        VStack {
+            Button(action: {
+                Task {
+                    await loadData()
+                }
+            }, label: {
+                Text("Load Data")
+            })
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 8) {
+                    ForEach(feedState.homeFeed ?? [], id: \.id) { imageUrl in
+                        AsyncImage(url: URL(string: imageUrl.urls.regular)) { image in
+                            image
+                                .centerCropped()
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            ProgressView()
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding(12)
         }
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+extension Image {
+    func centerCropped() -> some View {
+        GeometryReader { geo in
+            self
+            .resizable()
+            .scaledToFill()
+            .frame(width: geo.size.width, height: geo.size.height)
+            .clipped()
+        }
+    }
 }

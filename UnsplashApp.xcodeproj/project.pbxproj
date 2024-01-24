@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054DA81E2B61188E004DD642 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA81D2B61188E004DD642 /* TopicView.swift */; };
+		054DA8202B6148FB004DD642 /* SingleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA81F2B6148FB004DD642 /* SingleImageView.swift */; };
+		054DA8222B615351004DD642 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DA8212B615351004DD642 /* AuthorView.swift */; };
 		055F27842B600D44008CE163 /* UnsplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F27832B600D44008CE163 /* UnsplashModel.swift */; };
 		055F27882B600F6E008CE163 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F27872B600F6E008CE163 /* PListManager.swift */; };
 		055F278E2B60109D008CE163 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 055F278D2B60109D008CE163 /* environment.plist */; };
 		055F27902B601DAD008CE163 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F278F2B601DAD008CE163 /* FeedState.swift */; };
+		05E203892B60FA8E001957B0 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E203882B60FA8E001957B0 /* ImageGridView.swift */; };
+		05E2038C2B60FE9F001957B0 /* UnsplashTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E2038B2B60FE9F001957B0 /* UnsplashTopic.swift */; };
+		05E203902B61064C001957B0 /* TopicGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E2038F2B61064C001957B0 /* TopicGrid.swift */; };
 		05F719212B5FECC9004180CD /* UnsplashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F719202B5FECC9004180CD /* UnsplashApp.swift */; };
 		05F719232B5FECC9004180CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F719222B5FECC9004180CD /* ContentView.swift */; };
 		05F719272B5FECCB004180CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F719262B5FECCB004180CD /* Assets.xcassets */; };
@@ -18,15 +24,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054DA81D2B61188E004DD642 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
+		054DA81F2B6148FB004DD642 /* SingleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageView.swift; sourceTree = "<group>"; };
+		054DA8212B615351004DD642 /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
 		055F27832B600D44008CE163 /* UnsplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashModel.swift; sourceTree = "<group>"; };
 		055F27872B600F6E008CE163 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
 		055F278D2B60109D008CE163 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
 		055F278F2B601DAD008CE163 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
+		05E203882B60FA8E001957B0 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		05E2038B2B60FE9F001957B0 /* UnsplashTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashTopic.swift; sourceTree = "<group>"; };
+		05E2038F2B61064C001957B0 /* TopicGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicGrid.swift; sourceTree = "<group>"; };
 		05F7191D2B5FECC9004180CD /* UnsplashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F719202B5FECC9004180CD /* UnsplashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApp.swift; sourceTree = "<group>"; };
 		05F719222B5FECC9004180CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05F719262B5FECCB004180CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05F719282B5FECCB004180CD /* unsplash_network.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = unsplash_network.entitlements; sourceTree = "<group>"; };
 		05F7192A2B5FECCB004180CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +52,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05E2038A2B60FA93001957B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05E203882B60FA8E001957B0 /* ImageGridView.swift */,
+				05F719222B5FECC9004180CD /* ContentView.swift */,
+				05E2038F2B61064C001957B0 /* TopicGrid.swift */,
+				054DA81D2B61188E004DD642 /* TopicView.swift */,
+				054DA81F2B6148FB004DD642 /* SingleImageView.swift */,
+				054DA8212B615351004DD642 /* AuthorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05E2038E2B60FEBD001957B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				055F27832B600D44008CE163 /* UnsplashModel.swift */,
+				05E2038B2B60FE9F001957B0 /* UnsplashTopic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		05F719142B5FECC9004180CD = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +93,12 @@
 		05F7191F2B5FECC9004180CD /* unsplash-network */ = {
 			isa = PBXGroup;
 			children = (
+				05E2038E2B60FEBD001957B0 /* Models */,
+				05E2038A2B60FA93001957B0 /* Views */,
 				055F27872B600F6E008CE163 /* PListManager.swift */,
 				05F719202B5FECC9004180CD /* UnsplashApp.swift */,
-				05F719222B5FECC9004180CD /* ContentView.swift */,
 				05F719262B5FECCB004180CD /* Assets.xcassets */,
-				05F719282B5FECCB004180CD /* unsplash_network.entitlements */,
 				05F719292B5FECCB004180CD /* Preview Content */,
-				055F27832B600D44008CE163 /* UnsplashModel.swift */,
 				055F278D2B60109D008CE163 /* environment.plist */,
 				055F278F2B601DAD008CE163 /* FeedState.swift */,
 			);
@@ -153,8 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				055F27902B601DAD008CE163 /* FeedState.swift in Sources */,
+				05E203902B61064C001957B0 /* TopicGrid.swift in Sources */,
+				054DA8222B615351004DD642 /* AuthorView.swift in Sources */,
+				054DA81E2B61188E004DD642 /* TopicView.swift in Sources */,
 				055F27882B600F6E008CE163 /* PListManager.swift in Sources */,
+				05E2038C2B60FE9F001957B0 /* UnsplashTopic.swift in Sources */,
+				054DA8202B6148FB004DD642 /* SingleImageView.swift in Sources */,
 				055F27842B600D44008CE163 /* UnsplashModel.swift in Sources */,
+				05E203892B60FA8E001957B0 /* ImageGridView.swift in Sources */,
 				05F719232B5FECC9004180CD /* ContentView.swift in Sources */,
 				05F719212B5FECC9004180CD /* UnsplashApp.swift in Sources */,
 			);
@@ -288,6 +326,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"unsplash-network/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -325,6 +365,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"unsplash-network/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
